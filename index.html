@@ -75,6 +75,105 @@
             </div>
         </div>
     </div>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+           
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-12 col-md-2">
+                            Number of Guests
+                            
+                        </div>
+                        <div class="col-10">
+                            
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input"  type="radio" name="numgests" id="numgests1" value="1">
+                                <label class="form-check-label" for="numgests1">1</label>
+
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="numgests" id="numgests2" value="2">
+                                <label class="form-check-label" for="numgests2">
+                                    2
+                                  </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="numgests" id="numgests3" value="3">
+                                <label class="form-check-label" for="numgests3">
+                                  3
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="numgests" id="numgests4" value="4">
+                                <label class="form-check-label" for="numgests4">
+                                  4
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="numgests" id="numgests5" value="5">
+                                <label class="form-check-label" for="numgests5">
+                                  5
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="numgests" id="numgests6" value="6">
+                                <label class="form-check-label" for="numgests6">
+                                  6
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 col-md-2">
+                            Section
+                        </div>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-success btn-sm active ml-3">
+                              <input type="radio" name="smok" id="nonsmoking" autocomplete="on" value="non-smoking" checked>Non-smoking
+                            </label>
+                            <label class="btn btn-danger btn-sm">
+                              <input type="radio" name="smok" id="smoking" autocomplete="on" value="smoking">Smoking
+                            </label>
+                          </div>
+                       
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 col-md-2">
+                            Date and Time
+                        </div>
+                        <div class="input-group col-12 col-md-4">
+                            <input class="form-control" type="text" placeholder="Date">
+                        </div>
+                        <div class="input-group col-12 col-md-4">
+                            <input class="form-control" type="text" placeholder="Time">
+                        </div>
+                    </div>
+                    <div class="form-group row ">
+                        <div class="col-2">&nbsp;</div>
+                        <div class="col-xs-12 col-s-12 col-md-10" style="padding-right: 15px; padding-left: 15px; padding-top: 15px;">
+                            <button  class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal" type="button">Cancel</button>
+                            <button class="btn btn-sm ml-auto btn-primary" type="submit">Reserve</button>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -86,7 +185,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="d-block col-12 col-sm align-self-center">
-                    <a class="btn btn-block btn-sm nav-link btn-warning" style="color: white" role="button" href="#rentatable" data-toggle="tooltip" data-html="true" title="Or call us at <br><strong>+852 12345678</strong>" data-placement="bottom">Reserve Table</a>
+                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-sm nav-link btn-warning" style="color: white" role="button" href="#rentatable" >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -304,11 +403,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
